@@ -5,7 +5,7 @@ import NftCollection from "./components/nftCollection";
 
 const Page = () => {
   return (
-    <main className="w-full flex flex-col px-4 py-24 space-y-20">
+    <main className="w-full flex flex-col px-4 py-24 space-y-20 md:px-0">
       <Hero />
       <NftCollection />
     </main>

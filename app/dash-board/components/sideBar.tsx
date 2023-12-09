@@ -2,7 +2,7 @@ import React from "react";
 
 const SideBar = () => {
   return (
-    <nav className="hidden">
+    <nav className="w-[4%] bg-primary">
       <p>1</p>
       <p>2</p>
     </nav>
