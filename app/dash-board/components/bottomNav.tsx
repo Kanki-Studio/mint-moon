@@ -1,46 +1,11 @@
 "use client";
-import React, { ReactNode, useState } from "react";
-import {
-  HiOutlineClipboardList,
-  HiViewGrid,
-  HiUserCircle,
-} from "react-icons/hi";
-import { HiMiniCog8Tooth } from "react-icons/hi2";
+import React, { ReactNode, useContext } from "react";
 
-import { INavItem } from "@/app/utils/interfaces";
 import NavItem from "./navItem";
+import { AppContext } from "@/app/utils/context";
 
 const BottomNav = (): ReactNode => {
-  const [navItems, setNavItems] = useState<INavItem[]>([
-    { name: "home", path: "/home", icon: HiViewGrid, active: true },
-    {
-      name: "bids",
-      path: "/home/bids",
-      icon: HiOutlineClipboardList,
-      active: false,
-    },
-    {
-      name: "profile",
-      path: "/home/profile",
-      icon: HiUserCircle,
-      active: false,
-    },
-    {
-      name: "settings",
-      path: "/home/settings",
-      icon: HiMiniCog8Tooth,
-      active: false,
-    },
-  ]);
-
-  const handleActiveNavItem = (name: string) => {
-    const newValue = navItems.map((item) => {
-      if (item.name === name) return { ...item, active: true };
-      else return { ...item, active: false };
-    });
-
-    setNavItems(newValue);
-  };
+  const { navItems, handleActiveNavItem } = useContext(AppContext);
 
   return (
     <div className="w-full p-5 flex justify-center space-x-14 itmes-center bg-primary fixed bottom-0 md:hidden">

@@ -3,7 +3,7 @@ import React from "react";
 
 const HeaderNav = () => {
   return (
-    <header className="w-full fixed top-0 left-0 p-3 flex items-center justify-between bg-primary md:w-[96%] md:right-0 md:left-14 md:px-20">
+    <header className="w-full fixed top-0 left-0 p-3 flex items-center justify-between bg-main md:w-[96%] md:right-0 md:left-14 md:px-20">
       <div className="w-fit h-fit rounded-lg bg-purple-500 md:hidden">
         <Image src="/logo.png" alt="logo" width={38} height={38} />
       </div>

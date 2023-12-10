@@ -9,7 +9,11 @@ interface Prop {
 }
 
 const NavItem = ({ path, name, handleActive, children }: Prop): ReactNode => (
-  <Link href={path} onClick={() => handleActive(name)}>
+  <Link
+    href={path}
+    onClick={() => handleActive(name)}
+    className="cursor-pointer"
+  >
     {children}
   </Link>
 );

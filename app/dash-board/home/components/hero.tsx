@@ -3,9 +3,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="w-full rounded-xl bg-[url('/Discover.svg')] bg-cover">
-      <div className="w-full p-4 flex flex-col space-y-5 rounded-xl bg-purple-500 bg-opacity-40">
-        <h1 className="text-2xl text-white font-bold">
+    <section className="w-full rounded-xl bg-[url('/nft_hero_bg.jpg')] bg-cover md:h-96">
+      <div className="w-full p-4 flex flex-col space-y-5 rounded-xl bg-black bg-opacity-70 md:h-full md:items-center md:justify-center">
+        <h1 className="text-2xl text-white font-bold md:text-4xl md:w-3/4 md:text-center">
           Unlock the world of crypto and discover awesome collectibles
         </h1>
 

@@ -1,18 +1,30 @@
 import { NFT_COLLECTION } from "@/app/utils/constants";
 import React from "react";
 import NftCard from "../../components/nftCard";
+import Link from "next/link";
 
 const NftCollection = () => {
   return (
-    <section className="flex flex-col space-y-7">
-      {NFT_COLLECTION.map((nft) => (
-        <NftCard
-          key={nft.name}
-          name={nft.name}
-          nftImg={nft.nftImg}
-          price={nft.price}
-        />
-      ))}
+    <section className="w-full flex flex-col space-y-5">
+      <div className="w-full flex justify-between items-center text-semibold pr-2">
+        <h2 className="font-extrabold text-gray-300">NFT PRICING</h2>
+        <Link
+          href=""
+          className="px-5 py-1 rounded-full bg-btnPrimary text-xs font-bold text-gray-300 transition hover:scale-105"
+        >
+          See All
+        </Link>
+      </div>
+      <div className="w-full flex flex-col space-y-5 md:space-y-0 md:grid md:grid-cols-4 md:gap-4">
+        {NFT_COLLECTION.map((nft) => (
+          <NftCard
+            key={nft.name}
+            name={nft.name}
+            nftImg={nft.nftImg}
+            price={nft.price}
+          />
+        ))}
+      </div>
     </section>
   );
 };
