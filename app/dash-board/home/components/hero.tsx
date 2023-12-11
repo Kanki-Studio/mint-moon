@@ -1,7 +1,6 @@
-import { Button } from "@radix-ui/themes";
-import React from "react";
+import React, { ReactNode } from "react";
 
-const Hero = () => {
+const Hero = (): ReactNode => {
   return (
     <section className="w-full rounded-xl bg-[url('/nft_hero_bg.jpg')] bg-cover md:h-96">
       <div className="w-full p-4 flex flex-col space-y-5 rounded-xl bg-black bg-opacity-70 md:h-full md:items-center md:justify-center">

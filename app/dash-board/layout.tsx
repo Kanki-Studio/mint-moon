@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import {
   HiOutlineClipboardList,
   HiViewGrid,
@@ -13,7 +13,7 @@ import BottomNav from "./components/bottomNav";
 import { INavItem } from "../utils/interfaces";
 import ContextProvider from "../utils/context";
 
-const HomeLayout = ({ children }: { children: React.ReactNode }) => {
+const HomeLayout = ({ children }: { children: ReactNode }): ReactNode => {
   const [navItems, setNavItems] = useState<INavItem[]>([
     { name: "dash-board", path: "/dash-board", icon: HiViewGrid, active: true },
     {

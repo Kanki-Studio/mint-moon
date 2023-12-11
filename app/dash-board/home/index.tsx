@@ -1,14 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 import Hero from "./components/hero";
 import NftCollection from "./components/nftCollection";
+import SubRouteContainer from "../components/subRouteContainer";
 
-const Page = () => {
+const Page = (): ReactNode => {
   return (
-    <main className="w-full flex flex-col px-4 py-20 space-y-20 md:px-20">
+    <SubRouteContainer>
       <Hero />
       <NftCollection />
-    </main>
+    </SubRouteContainer>
   );
 };
 

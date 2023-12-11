@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface Prop {
   name: string;
@@ -6,9 +6,9 @@ interface Prop {
   nftImg: string;
 }
 
-const NftCard = ({ name, price, nftImg }: Prop) => {
+const NftCard = ({ name, price, nftImg }: Prop): ReactNode => {
   return (
-    <div className="w-full p-5 rounded-xl flex space-y-7 flex flex-col justify-between bg-primary shadow-md md:w-[250px] md:p-3 md:space-y-0">
+    <div className="w-full p-5 rounded-xl space-y-7 flex flex-col justify-between bg-primary shadow-md md:w-[250px] md:p-3 md:space-y-0">
       <div
         style={{ backgroundImage: `url(${nftImg})` }}
         className="w-full rounded-xl h-fit py-36 bg-cover md:bg-center md:py-0 md:h-[150px]"

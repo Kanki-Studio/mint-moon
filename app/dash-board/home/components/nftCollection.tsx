@@ -1,9 +1,9 @@
 import { NFT_COLLECTION } from "@/app/utils/constants";
-import React from "react";
+import React, { ReactNode } from "react";
 import NftCard from "../../components/nftCard";
 import Link from "next/link";
 
-const NftCollection = () => {
+const NftCollection = (): ReactNode => {
   return (
     <section className="w-full flex flex-col space-y-5">
       <div className="w-full flex justify-between items-center text-semibold pr-2">

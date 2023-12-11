@@ -1,10 +1,10 @@
 import Link from "next/link";
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 interface Prop {
   name: string;
   path: string;
-  children: ReactElement;
+  children: ReactNode;
   handleActive: (name: string) => void;
 }
 

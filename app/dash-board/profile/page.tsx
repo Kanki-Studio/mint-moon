@@ -1,7 +1,8 @@
 import React from "react";
+import SubRouteContainer from "../components/subRouteContainer";
 
 const Profile = () => {
-  return <div>Profile</div>;
+  return <SubRouteContainer>Profile</SubRouteContainer>;
 };
 
 export default Profile;
