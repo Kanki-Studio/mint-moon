@@ -13,7 +13,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col bg-primary space-y-12 py-10 px-5 md:px-12">
+    <footer className="w-full flex flex-col bg-primary space-y-12 py-10 px-5 md:px-12 md:py-1">
       <section className="w-full flex flex-col space-y-4  md:flex-row md:items-center md:justify-between">
         <div className="flex items-center justify-center">
           <Image src="/logo.png" alt="logo" width={38} height={38} />
@@ -60,8 +60,8 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="w-full flex flex-col space-y-4">
-        <aside>
+      <section className="w-full flex flex-col space-y-4 md:flex-row md:space-y-0 md:items-center md:justify-between">
+        <aside className="w-[25%]">
           <h5 className="text-sm text-white py-5 font-bold border-b-2">MENU</h5>
           <div className="flex justify-between py-5">
             <p className="flex flex-col space-y-5">
@@ -165,12 +165,12 @@ const Footer = () => {
           </div>
         </aside>
 
-        <div className="p-5 flex flex-col space-y-5  rounded-3xl bg-gray-400 bg-opacity-30">
+        <div className="p-5 flex flex-col space-y-5 rounded-3xl bg-gray-400 bg-opacity-30 md:h-fit">
           <h5 className="text-sm font-bold text-white">
             DOWNLOAD OUR APPLICATION
           </h5>
 
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-gray-400 md:w-80">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit error
             perspiciatis placeat voluptatibus a
           </p>
