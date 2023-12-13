@@ -1,15 +1,20 @@
 "use client";
 import React, { ReactNode, useState } from "react";
 import Home from "./home";
-import ContextProvider, { AppContext } from "./utils/context";
+import ContextProvider from "./utils/context";
+import DropNav from "./components/dropNav";
 
 export default function App(): ReactNode {
+  const [toggleDropNav, setToggleDropNav] = useState(false);
+
   const [navItems, setNavItems] = useState([
     { name: "Home", path: "/", active: true },
     { name: "Bids", path: "/bids", active: false },
     { name: "Profile", path: "/profile", active: false },
     { name: "Setting", path: "/settings", active: false },
   ]);
+
+  const handletoggleDropNav = (): void => setToggleDropNav((prev) => !prev);
 
   const handleActiveNavItem = (name: string): void => {
     const newVal = navItems.map((item) => {
@@ -21,8 +26,16 @@ export default function App(): ReactNode {
   };
 
   return (
-    <ContextProvider value={{ navItems, handleActiveNavItem }}>
-      <main className="w-full min-h-screen">
+    <ContextProvider
+      value={{
+        navItems,
+        toggleDropNav,
+        handleActiveNavItem,
+        handletoggleDropNav,
+      }}
+    >
+      <main className="w-full min-h-screen relative flex justify-center">
+        {toggleDropNav && <DropNav />}
         <Home />
       </main>
     </ContextProvider>

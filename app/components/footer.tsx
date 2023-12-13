@@ -61,7 +61,7 @@ const Footer = () => {
       </section>
 
       <section className="w-full flex flex-col space-y-4 md:flex-row md:space-y-0 md:items-center md:justify-between">
-        <aside className="w-[25%]">
+        <aside className="md:w-[25%]">
           <h5 className="text-sm text-white py-5 font-bold border-b-2">MENU</h5>
           <div className="flex justify-between py-5">
             <p className="flex flex-col space-y-5">

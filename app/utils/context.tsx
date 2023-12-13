@@ -3,6 +3,8 @@ import { INavItem } from "./interfaces";
 
 interface IContext {
   navItems: INavItem[];
+  toggleDropNav: boolean;
+  handletoggleDropNav: () => void;
   handleActiveNavItem: (name: string) => void;
 }
 
@@ -13,7 +15,14 @@ interface Prop {
 
 export const AppContext = createContext<IContext>({
   navItems: [],
+
+  toggleDropNav: false,
+
   handleActiveNavItem: function (name: string): void {
+    throw new Error("Function not implemented.");
+  },
+
+  handletoggleDropNav: function (): void {
     throw new Error("Function not implemented.");
   },
 });

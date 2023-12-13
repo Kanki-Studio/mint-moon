@@ -2,16 +2,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useContext } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import NavItem from "./navItem";
 import { AppContext } from "../utils/context";
 
 const HeaderNav = () => {
-  const { navItems, handleActiveNavItem } = useContext(AppContext);
+  const { navItems, toggleDropNav, handletoggleDropNav, handleActiveNavItem } =
+    useContext(AppContext);
 
   return (
-    <header className="w-full fixed top-0 left-0 p-3 flex items-center justify-between bg-main">
+    <header className="w-full fixed top-0 left-0 z-20 p-3 flex items-center justify-between bg-main">
       <section className="w-full flex items-center justify-between space-x-2 md:w-fit">
         <div>
           <Image
@@ -39,8 +40,17 @@ const HeaderNav = () => {
             className="w-full bg-transparent outline-none"
           />
         </div>
-
-        <FaBars className="text-gray-400 text-xl font-bold transition cursor-pointer hover:text-btnPrimary md:hidden" />
+        {toggleDropNav ? (
+          <FaTimes
+            onClick={handletoggleDropNav}
+            className="text-gray-400 text-xl font-bold transition cursor-pointer hover:text-btnPrimary md:hidden"
+          />
+        ) : (
+          <FaBars
+            onClick={handletoggleDropNav}
+            className="text-gray-400 text-xl font-bold transition cursor-pointer hover:text-btnPrimary md:hidden"
+          />
+        )}
       </section>
 
       <div className="hidden space-x-12 md:flex">

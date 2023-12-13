@@ -14,11 +14,11 @@ const Hero = (): ReactNode => {
         </p>
 
         <div className="w-full flex flex-col space-y-5 md:space-x-5 md:flex-row md:space-y-0 md:justify-center">
-          <button className="w-full p-2 px-5 text-sm rounded-md text-white font-semibold transition bg-purple-600 hover:scale-105 md:w-fit">
+          <button className="w-full py-3 px-5 text-sm rounded-md text-white font-semibold transition bg-purple-600 hover:scale-105 md:w-fit">
             Explore
           </button>
 
-          <button className="w-full p-2 px-5 text-sm rounded-md text-white font-semibold transition bg-red-500 hover:scale-105 md:w-fit">
+          <button className="w-full py-3 px-5 text-sm rounded-md text-white font-semibold transition bg-red-500 hover:scale-105 md:w-fit">
             Start Guide
           </button>
         </div>
